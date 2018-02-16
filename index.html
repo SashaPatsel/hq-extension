@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Increment++</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Indie+Flower|Kavivanar|Lora|Questrial" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 lefts" id="row1news">
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Trending News</button>
+            <div id="demo" class="collapse">
+                <div class="collapse-box">
+                    <div class="news-article" id="news1-here"></div>
+                    <div class="news-source" id="source1-here"></div>
+                    <div class="news-article" id="news2-here"></div>
+                    <div class="news-source" id="source2-here"></div>
+                    <div class="news-article" id="news3-here"></div>
+                    <div class="news-source" id="source3-here"></div>
+                    <p class="news-power">Powered by NewsAPI.org</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 centers" id="row1quote">
+            <div id="quote-here"></div>
+            <div id="author-here"></div>
+        </div>
+        <div class="col-md-4 rights" id="row1commute">
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#newGif">Wanna see a fun gif?</button>
+            <div id="newGif" class="collapse">
+                <div class="collapse-box">
+
+                    <div id="gifDiv"></div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- //////////////////// -->
+    <div class="row" id="row-two">
+        <div class="col-md-4 lefts" id="row2blank1">
+            
+        </div>
+        <div class="col-md-4 centers" id="row2weather">
+            <div class="weather-icons"></div>
+            <div class="show-weather">
+            </div>
+
+        </div>
+        <div class="col-md-4 rights" id="row2blank2">
+            
+        </div>
+    </div>
+    <!-- //////////////////// -->
+    <div class="row">
+        <div class="col-md-4 lefts" id="row3blank1">  
+        </div>
+        <div class="col-md-4 centers" id="row3journal">
+            <div id="journal-underline">
+                <h1>What are you thinking, <span id    ="journal-user"></span>?</h1>
+                <form>
+                    <label for="journal-input">
+                        <input type="text-submit" class="form-control" id="journal-input" placeholder id="fix" What are you thinking?">
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4 rights" id="row3blank2">
+            
+        </div>
+    </div>
+
+    <!-- //////////////////// -->
+    <div id="footer" class="row">
+        <div class="col-md-4 lefts" id="row4credit">
+            <div class="dropup settings">
+               <button id="settings-button" class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Cog_font_awesome.svg" alt="Settings" height="30px" width="30px" class="settings-button">
+               </button>
+                   <ul id="init-login" class="dropdown-menu">
+                       <form><input class="login-submit" type="text" id="emailInput" placeholder="E-mail">
+                         <input class="login-submit"type="password" id="passInput" placeholder="Password">
+                         <button class="button-space" id="logIn">Log in</button>
+                         <button class="button-space" id="signUp">Sign Up</button>
+                         <button class="button-space" id="logOut">Log Out</button>
+                     </form>
+                     <form>
+                      <h4>Want to change your name?</h4>
+                      <input id="user-name" type="text" placeholder="Name">
+
+                      <h4>Which city's weather would you like to know about?</h4>
+                      <input id="cityInput" type="text" placeholder="City">
+                      <button>Submit</button>
+                      </form>
+                     <br>
+                     <h4>Choose a Font: </h4>
+                     <h4><span id="kavivanar">Kavivanar    </span>|<span id="lora">   Lora</span>|<span id="indie-flower">   Indie Flower</span>|<span id="bitter">   Bitter</span>|<span id="questrial">   Questrial</h4>
+                   </ul>  
+           </div>          
+        </div>
+        <div class="col-md-4 centers" id="row4blank">
+          <p class="tiny-text">Powered by Unsplashed, Random Quote Generator, OpenWeather Maps API</p>
+        </div>
+        <div class="col-md-4 rights" id="row4jcs">
+
+            <div class="dropup">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
+                    Journal
+                    <span class="caret"></span>
+                </button>
+                <ul id="journal-entries" class="dropdown-menu">
+                </ul>
+                <!-- <div id="journal-entries"></div> -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+    <!-- Modal -->
+   <div id="myModal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Welcome to Incrementt. Please take a moment to make an account or sign in</h4>
+         </div>
+         <div class="modal-body">
+            
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+       <!-- Modal to register preferences -->
+   <div id="initModal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Now that you're signed up, help us personalize your experience.</h4>
+         </div>
+         <div class="init-modal-body">
+
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+
+
+    <!-- //////////////////// -->
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </script>
+
+
+    <!-- background script -->
+    <script type="text/javascript" src="assets/javascript/backgroundImages.js"></script>
+    <script type="text/javascript" src="assets/javascript/keys.js"></script>    
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>

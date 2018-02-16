@@ -1,0 +1,371 @@
+.modal-content {
+  background-color: rgba(20,20,20,.6)
+}
+/* html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+ #map {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+      }*/
+
+body {
+  /*font-family: questrial;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: oswald;
+
+  text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+a:link {
+  color: white;
+}
+
+.lefts {
+  text-align: left;
+  padding-left: 2%;
+}
+
+.centers {
+  text-align: center;
+}
+
+.rights {
+  text-align: right;
+  padding-right: 2%;
+}
+
+#bottoms {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+#row1news, #row1quote, #row1commute {
+  padding-top: 1%;
+}
+
+
+#row-two {
+  margin-top: 7%;
+}
+
+.row-4 {
+  margin-top: 9%;
+}
+
+#row4credit, #row4blank, #row4jcs {
+  padding-bottom: 1%;
+}
+
+/*News CSS*/
+.news-power {
+  text-align: right;
+  color: white;
+  font-size: 8px;
+}
+.collapse-box {
+  border-radius: 5px;
+  background-color: rgba(0,0,0, 0.4);
+  padding: 5%;
+  margin-top: 3%;
+}
+.btn, .btn-info, .btn:hover {
+  background: lightblue;
+  border-color: black;
+  font-size: 18px
+}
+.news-article {
+  font-size: 14px;
+  color: white;
+  text-align: left;
+}
+.news-source {
+  font-size: 10px;
+  color: white;
+  text-align: right;
+}
+#demo, .collapse-box {
+  position: absolute;
+  z-index: 999999;
+  width: 80%;
+}
+
+#newGif {
+  position: absolute;
+  z-index: 12;
+}
+
+#gifDisplay {
+  bottom: -250px;
+  right: 400px;
+  opacity: 1;
+  z-index: 3;
+}
+
+/*Add CommentCollapse */
+
+/*Quote CSS*/
+
+#quote-here {
+  font-size: 16px;
+  /*font-weight: bold;*/
+  color: white;
+}
+
+#author-here {
+  font-size: 12px;
+  color: white;
+}
+
+/*Commute*/
+
+
+
+/*Weather*/
+.weather-img {
+  max-height: 60px;
+  max-width: 60px
+}
+
+h5 {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  font-size: 12px;
+}
+
+h3 {
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  color: white;
+}
+
+/*Journal Input*/
+h1 {
+  font-size: 35px;
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+button {
+  color: black;
+}
+
+#journal-input {
+  width  : 400px;
+  height : 60px;
+  margin : 0 auto;
+
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 10;
+  
+  font-size: 30px;
+  color: white;
+  background: transparent;
+}
+
+#journal-input#fix {
+  font-size: 50px;
+}
+
+#journal-underline {
+  border-bottom-style: solid;
+  color: lightblue;
+}
+
+/*Credit*/
+
+
+
+/*Journal Entries*/
+
+/*#all-journals {
+  width: 200%;
+}*/
+
+.dropdown-menu {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.4);
+  white-space: wrap;
+  overflow-y: scroll; 
+  padding: auto;
+
+}
+
+#journal-entries {
+  color: white;
+  height: 610%;
+  width: 55%;
+  padding: 5%;
+  margin-bottom: 5%;
+  font-size: 14px;
+}
+
+/* positioning of journal entries */
+ul#journal-entries{ 
+  top: -245px;
+  left: 195px;
+  opacity: 1;
+  z-index: 3;  
+}
+
+/*Settings*/
+#settings-button {
+  background-color: transparent;
+  border: solid rgba(255,255,50,.7);
+}
+
+#init-login.dropdown-menu {
+  color: black;
+  padding: 5px;
+}
+
+.login-submit {
+  color: black;
+}
+
+#user-name{
+  color: black;
+}
+
+#init-login.dropdown-menu {
+  color: black;
+}
+
+#user-name {
+  color: black;
+}
+
+#kavivanar{
+  font-family: 'Kavivanar', cursive;
+    transition: all 0.2s ease-in;
+    text-decoration:none;
+}
+#lora{
+  font-family: 'Lora', serif;
+    transition: all 0.2s ease-in;
+    text-decoration:none;
+}
+#indie-flower{
+  font-family: 'Indie Flower', cursive;
+    transition: all 0.2s ease-in;
+    text-decoration:none;
+}
+#bitter{
+  font-family: 'Bitter', serif;
+    transition: all 0.2s ease-in;
+    text-decoration:none;
+}
+#questrial{
+  font-family: 'Questrial', sans-serif;
+    transition: all 0.2s ease-in;
+    text-decoration:none;
+}
+
+
+#kavivanar:hover{
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+}
+#lora:hover{
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+}
+#indie-flower:hover{
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+}
+#bitter:hover{
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+}
+#questrial:hover{
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+}
+
+.scootch-left {
+  margin-left: 40px
+}
+
+#footer {
+  margin-top: 8%;
+}
+
+.button-space {
+  margin: 5px;
+}
+@media screen and (max-width: 980px) {
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .dropdown-menu {
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.9);
+    white-space: wrap;
+    overflow-y: scroll; 
+  }
+
+  .collapse-box {
+    border-radius: 5px;
+    background-color: rgba(0,0,0, 0.9);
+    padding: 5%;
+    margin-top: 3%;
+  }
+
+  #journal-entries {
+  color: white;
+  height: 1100%;
+  width: 98%;
+  padding: 5%;
+  margin-bottom: 5%;
+  line-height: 1.5;
+  font-size: 18px;
+  }
+
+  #demo{
+    height: 1100%;
+    width: 110%
+  }
+}
