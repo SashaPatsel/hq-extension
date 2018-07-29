@@ -135,7 +135,7 @@ auth.onAuthStateChanged(firebaseUser => {
         //Prompts user to sign in or make an account
         $("#myModal").modal("show");
 
-        $(".modal-body").html('<form><input class="login-submit" type="text" id="emailInput1" placeholder="E-mail"><input class="login-submit"type="password" id="passInput1" placeholder="Password"><button id="signUp1">Sign Up</button><button id="logIn1">Log in</button></form>');
+        $(".modal-body").html('<form><input class="login-submit emailInput1 auth-input" type="text" id="emailInput1" placeholder="E-mail"><input class="login-submit passInput1 auth-input" type="password" id="passInput1" placeholder="Password"><button class="auth-btn" id="signUp1">Sign Up</button><button class="auth-btn" id="logIn1">Log in</button></form>');
 
         //Login (on modal)
         $(document).on("click", "#logIn1", function() {

@@ -1,6 +1,30 @@
 .modal-content {
-  background-color: rgba(20,20,20,.6)
+  background-color: rgba(20,20,20,.8);
 }
+
+
+
+.modal__heading--one {
+  font-size: 25px;
+}
+
+.auth-input {
+  display: block;
+  margin: 5px auto 15px;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  width: 50%;
+  height: 40px;
+  font-family: inherit;
+}
+
+.auth-btn {
+  display: block;
+  margin: 5px auto 15px;
+  font-family: inherit;
+}
+
 /* html, body {
         height: 100%;
         margin: 0;
@@ -30,6 +54,8 @@ body {
   overflow-x: hidden;
   background-color: black;
 }
+
+
 
 .btn {
   /* background-image: linear-gradient(to right bottom, rgb(85, 136, 211), rgb(200,200,200)) !important; */
