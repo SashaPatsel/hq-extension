@@ -30,7 +30,9 @@ body {
 }
 
 .btn {
-  background-image: linear-gradient(to right bottom, rgb(85, 136, 211), rgb(200,200,200)) !important;
+  /* background-image: linear-gradient(to right bottom, rgb(85, 136, 211), rgb(200,200,200)) !important; */
+  background-color: transparent !important;
+  border: none !important;
 }
 
 a:link {
