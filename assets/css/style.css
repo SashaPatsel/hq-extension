@@ -1,11 +1,16 @@
 .modal-content {
-  background-color: rgba(20,20,20,.8);
+  /* background-color: rgb(17, 38, 107); */
+  background-image: radial-gradient( rgb(32, 74, 129), black);
+  width: 140%;
+  left: -17%;
 }
 
 
 
 .modal__heading--one {
   font-size: 25px;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .auth-input {
@@ -17,6 +22,10 @@
   width: 50%;
   height: 40px;
   font-family: inherit;
+}
+
+.auth-input:focus {
+  outline: none;
 }
 
 .auth-btn {
@@ -38,6 +47,11 @@
   transform: scale(1.1);
 }
 
+.config__label {
+  display: block;
+  text-align: center;
+  margin: 20px 0 10px;
+}
 
 /* 
 &__link {

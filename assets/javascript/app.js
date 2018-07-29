@@ -159,7 +159,7 @@ auth.onAuthStateChanged(firebaseUser => {
             $("#myModal").modal("hide");
             $("#initModal").modal("show");
 
-            $(".init-modal-body").html('<form><h4>What is your name?</h4><input id="user-name1" type="text" placeholder="Name"><h4>Which city are you from?</h4><input id="cityInput1" type="text" placeholder="City"></form><br><h4>Choose a Font: </h4><h4><span id="kavivanar">Kavivanar    </span>|<span id="lora">   Lora</span>|<span id="indie-flower">   Indie Flower</span>|<span id="bitter">   Bitter</span>|<span id="questrial">   Questrial</h4><button id="init-submit">Submit</button>');
+            $(".init-modal-body").html('<form><label class="config__label">What is your name?</label><input class="auth-input" id="user-name1" type="text" placeholder="Name"><label class="config__label">Which city are you from?</label><input class="auth-input" id="cityInput1" type="text" placeholder="City"></form><br><label class="config__label">Choose a Font: </label><label class="config__label"><span id="kavivanar">Kavivanar    </span>|<span id="lora">   Lora</span>|<span id="indie-flower">   Indie Flower</span>|<span id="bitter">   Bitter</span>|<span id="questrial">   Questrial</label><button class="auth-btn" id="init-submit">Submit</button>');
 
             $(document).on("click", "#init-submit", function(event) {
                 // if ($("#user-name").val() == "" || $("#cityInput").val() == "" ) return;
