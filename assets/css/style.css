@@ -29,6 +29,10 @@ body {
   background-color: black;
 }
 
+.btn {
+  background-image: linear-gradient(to right bottom, rgb(85, 136, 211), rgb(200,200,200)) !important;
+}
+
 a:link {
   color: white;
 }
@@ -320,37 +324,15 @@ ul#journal-entries{
     text-decoration:none;
 }
 
+.font-choice:hover {
+  -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px yellow;
+    cursor: pointer;
+}
 
-#kavivanar:hover{
-  -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px yellow;
-}
-#lora:hover{
-  -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px yellow;
-}
-#indie-flower:hover{
-  -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px yellow;
-}
-#bitter:hover{
-  -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px yellow;
-}
-#questrial:hover{
-  -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px yellow;
-}
+
 
 .scootch-left {
   margin-left: 40px
