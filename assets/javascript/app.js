@@ -1,7 +1,8 @@
 // Initialize Firebase
 
+
 var config = {
-    apiKey: keys.FIREBASE,
+    apiKey: "AIzaSyAUZ6srtHsxIDDM-3zeuXAQr6C733mm_og",
     authDomain: "project-1-c7fd4.firebaseapp.com",
     databaseURL: "https://project-1-c7fd4.firebaseio.com",
     projectId: "project-1-c7fd4",
@@ -96,7 +97,7 @@ auth.onAuthStateChanged(firebaseUser => {
 
         //Logs name into user data
         $(document).on("submit", function(event) {
-           if ($("#user-name").val() == "" || $("#cityInput").val() == "" ) return;
+            if ($("#user-name").val() == "" || $("#cityInput").val() == "") return;
             event.preventDefault();
 
             userName = $("#user-name").val().trim();
@@ -152,22 +153,22 @@ auth.onAuthStateChanged(firebaseUser => {
             $("#initModal").modal("show");
 
             $(".init-modal-body").html('<form><h4>What is your name?</h4><input id="user-name1" type="text" placeholder="Name"><h4>Which city are you from?</h4><input id="cityInput1" type="text" placeholder="City"></form><br><h4>Choose a Font: </h4><h4><span id="kavivanar">Kavivanar    </span>|<span id="lora">   Lora</span>|<span id="indie-flower">   Indie Flower</span>|<span id="bitter">   Bitter</span>|<span id="questrial">   Questrial</h4><button id="init-submit">Submit</button>');
-            
+
             $(document).on("click", "#init-submit", function(event) {
-           // if ($("#user-name").val() == "" || $("#cityInput").val() == "" ) return;
-            userName = $("#user-name1").val().trim();
-            city = $("#cityInput1").val().trim();
-            database.ref().child("user/" + userID + "/Names").set({
-                name: userName,
+                // if ($("#user-name").val() == "" || $("#cityInput").val() == "" ) return;
+                userName = $("#user-name1").val().trim();
+                city = $("#cityInput1").val().trim();
+                database.ref().child("user/" + userID + "/Names").set({
+                    name: userName,
 
-            });
+                });
 
-            database.ref().child("user/" + userID + "/Location").set({
-                city: city,
+                database.ref().child("user/" + userID + "/Location").set({
+                    city: city,
 
-            });
-            console.log("i exist")
-            $("#initModal").modal("hide");
+                });
+                console.log("i exist")
+                $("#initModal").modal("hide");
             });
 
             //Logs name into user data
@@ -194,7 +195,14 @@ auth.onAuthStateChanged(firebaseUser => {
     });
 
     database.ref("user/" + userID + "/journalLog").on("child_added", function(snapshotJ) {
-        $("#journal-entries").prepend("<h5>" + moment(snapshotJ.val().dateAdded).format('lll') + ": </h5>" + snapshotJ.val().journalEntry + "<hr>")
+        $("#journal-entries").prepend("<i class='material-icons trash-style'>delete</i><h5>" + moment(snapshotJ.val().dateAdded).format('lll') + ": </h5>" + snapshotJ.val().journalEntry + "<hr>")
+
+    });
+
+    //Deletes all journal entries rn
+    $(document).on("click", ".trash-style", function(event) {
+
+        database.ref("user/" + userID + "/journalLog/").child().remove()
 
     });
 
@@ -212,27 +220,13 @@ auth.onAuthStateChanged(firebaseUser => {
 });
 
 
-//=========================================================== Commute ================================================================
-
-// destinations=40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C
-// var departLocation = "40.6655101,-73.89188969999998";
-// var arriveLocation = "40.598566%2C-73.7527626";
-
-// $.getJSON("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + departLocation + "&destinations=" + arriveLocation + "&key=keys.GOOGLE_MAPS", function(data) {
-//     $.each(data, function(key, val) {
-//         console.log(key)
-//         //cannot read past "elements"
-//         console.log(val)
-//     });
-// });
-
 
 //=========================================================== NEWS ================================================================
 
 
 var queryURLnews = 'https://newsapi.org/v2/top-headlines?' +
     'country=us&' +
-    'apiKey=' + keys.NEWS;
+    'apiKey=' + "90dcb619e6ce411f953e53b282297dee";
 
 $.ajax({
     url: queryURLnews,
@@ -294,7 +288,7 @@ $.ajax({
 
 function getLocalWeather(city) {
 
-    var queryURLweather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + keys.OPEN_WEATHER_MAPS;
+    var queryURLweather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + "d8d64a31b79e4c92c420bd81c4289876";
 
     $.ajax({
         url: queryURLweather,
@@ -334,11 +328,21 @@ function getLocalWeather(city) {
 
 //=========================================================== Images ================================================================
 
-  var backupImg = ["assets/images/1.jpg", "assets/images/2.jpg", "assets/images/3.jpg", "assets/images/4.jpg", "assets/images/5.jpg", "assets/images/6.jpg", "assets/images/8.jpg", "assets/images/9.jpg", "assets/images/10.jpg", "assets/images/11.jpg", "assets/images/12.jpg", "assets/images/13.jpg", "assets/images/14.jpg"];
+var backupImg = ["assets/images/1.jpg", "assets/images/2.jpg", "assets/images/3.jpg", "assets/images/5.jpg", "assets/images/6.jpg", "assets/images/8.jpg", "assets/images/9.jpg", "assets/images/10.jpg", "assets/images/11.jpg", "assets/images/12.jpg", "assets/images/13.jpg", "assets/images/14.jpg", "assets/images/space1.jpg", "assets/images/space2.jpg", "assets/images/space3.jpg", "assets/images/space4.jpg", "assets/images/space5.jpg", "assets/images/space6.jpg", "assets/images/space7.jpg", "assets/images/sea1.jpg", "assets/images/midNowhere1.jpg", "assets/images/midNowhere2.jpg", "assets/images/winter1.jpg", "assets/images/winter2.jpg", "assets/images/peaceful1.jpg", "assets/images/clouds1.jpg", "assets/images/cave1.jpg", "assets/images/sunny1.jpg", "assets/images/tropic1.jpg", "assets/images/tropic2.jpg"];
 
-  var imgIndex = Math.floor(Math.random() * backupImg.length);
-  tempImg = backupImg[imgIndex];
-  $('body').css('background', 'url(' + tempImg + ') center');
-  $('body').css('background-size', 'cover');
+var spaceImg = [];
 
-  $('body').css('background-repeat', 'no-repeat'); 
+var underWaterImg = []
+
+var winterImg = []
+
+
+var midNowhereImg = []
+
+
+var imgIndex = Math.floor(Math.random() * backupImg.length);
+tempImg = backupImg[imgIndex];
+$('body').css('background', 'url(' + tempImg + ') center');
+$('body').css('background-size', 'cover');
+$('body').css('width', '100%');
+$('body').css('background-repeat', 'no-repeat');

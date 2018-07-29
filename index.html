@@ -7,11 +7,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bitter|Indie+Flower|Kavivanar|Lora|Questrial" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/icon-font.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <link rel="stylesheet" type="text/css" href="">
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 lefts" id="row1news">
@@ -66,7 +67,7 @@
                 <h1>What are you thinking, <span id    ="journal-user"></span>?</h1>
                 <form>
                     <label for="journal-input">
-                        <input type="text-submit" class="form-control" id="journal-input" placeholder id="fix" What are you thinking?">
+                        <input type="text-submit" class="form-control" id="journal-input" id="fix">
                     </label>
                 </form>
             </div>
@@ -77,11 +78,11 @@
     </div>
 
     <!-- //////////////////// -->
-    <div id="footer" class="row">
-        <div class="col-md-4 lefts" id="row4credit">
+    <div id="footer" >
+        <div class="lefts settings" id="row4credit">
             <div class="dropup settings">
-               <button id="settings-button" class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Cog_font_awesome.svg" alt="Settings" height="30px" width="30px" class="settings-button">
+               <button id="settings-button" class="settings__btn dropdown-toggle" type="button" data-toggle="dropdown" >
+                <i class="icon-basic-gear "></i>
                </button>
                    <ul id="init-login" class="dropdown-menu">
                        <form><input class="login-submit" type="text" id="emailInput" placeholder="E-mail">
@@ -104,10 +105,12 @@
                    </ul>  
            </div>          
         </div>
-        <div class="col-md-4 centers" id="row4blank">
+        
+        <div class="col-md-4 centers credits" id="row4blank">
           <p class="tiny-text">Powered by Unsplashed, Random Quote Generator, OpenWeather Maps API</p>
         </div>
-        <div class="col-md-4 rights" id="row4jcs">
+
+        <div class="col-md-4 rights journal" id="row4jcs">
 
             <div class="dropup">
                 <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
@@ -177,7 +180,7 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    </script>
+
 
 
     <!-- background script -->
