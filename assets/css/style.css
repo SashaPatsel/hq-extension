@@ -35,6 +35,14 @@ body {
   border: none !important;
 }
 
+.feature-btn {
+  transition: .2s;
+}
+
+.feature-btn:hover {
+  transform: scale(1.2);
+}
+
 .tiny-text {
   font-size: 8px;
 }
