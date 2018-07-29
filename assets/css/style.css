@@ -35,6 +35,10 @@ body {
   border: none !important;
 }
 
+.tiny-text {
+  font-size: 8px;
+}
+
 a:link {
   color: white;
 }
