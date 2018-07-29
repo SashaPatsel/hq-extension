@@ -23,7 +23,49 @@
   display: block;
   margin: 5px auto 15px;
   font-family: inherit;
+  border-radius: 50px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #1d1acc 50%);
+  background-size: 245%;
+  transition: all .4s;
 }
+
+.auth-btn:hover,
+.auth-btn:active {
+  background-position: 99%;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+/* 
+&__link {
+  &:link,
+  &:visited {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 230%;
+    transition: all .4s;
+    display: inline-block;
+
+    span {
+      margin-right: 1rem;
+      display: inline-block;
+    }
+  }
+
+  &:hover,
+  &:active {
+    background-position: 100%;
+    color: $color-primary;
+    transform: translateX(1rem);
+  } */
 
 /* html, body {
         height: 100%;
